@@ -1,0 +1,340 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #64748b;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --text-light: #64748b;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* 头部 */
+header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.header-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* 语言切换 */
+.lang-switch {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.lang-btn:hover {
+    background: var(--bg);
+}
+
+.lang-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* 主要内容 */
+main {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 产品类型选择 */
+.product-type {
+    margin-bottom: 2rem;
+}
+
+.product-type h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.type-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.type-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    border: 2px solid var(--border);
+    background: var(--surface);
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.type-btn .icon {
+    font-size: 1.5rem;
+}
+
+.type-btn:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+.type-btn.active {
+    border-color: var(--primary);
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    color: var(--primary);
+}
+
+/* 矩阵区域 */
+.matrix-section {
+    background: var(--surface);
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.matrix-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.matrix-header h2 {
+    font-size: 1.25rem;
+}
+
+.matrix-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.selected-count {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.compare-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.compare-btn:hover:not(:disabled) {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.compare-btn:disabled {
+    background: var(--secondary);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* 矩阵表格 */
+.matrix-table-container {
+    overflow-x: auto;
+    padding: 1rem;
+}
+
+.matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.matrix-table th,
+.matrix-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid var(--border);
+    vertical-align: top;
+}
+
+.matrix-table th {
+    background: #f1f5f9;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+}
+
+.matrix-table th:first-child {
+    background: #e2e8f0;
+    font-weight: 700;
+    min-width: 100px;
+}
+
+.matrix-table td:first-child {
+    background: #f8fafc;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* 产品单元格 */
+.product-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product-item {
+    padding: 0.5rem 0.75rem;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.product-item:hover {
+    background: #eff6ff;
+    border-color: var(--primary);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+}
+
+.product-item.selected {
+    background: #dbeafe;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.product-item .model-name {
+    font-weight: 600;
+    font-size: 0.8125rem;
+    color: var(--text);
+}
+
+.product-item .brand-tag {
+    font-size: 0.6875rem;
+    color: var(--text-light);
+    margin-top: 0.25rem;
+}
+
+/* 提示框 */
+.product-tooltip {
+    position: fixed;
+    display: none;
+    z-index: 1000;
+    background: var(--surface);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    padding: 1rem;
+    min-width: 220px;
+    max-width: 280px;
+    border: 1px solid var(--border);
+    pointer-events: none;
+}
+
+.product-tooltip.visible {
+    display: block;
+}
+
+.tooltip-content h4 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.tooltip-content ul {
+    list-style: none;
+}
+
+.tooltip-content li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.375rem 0;
+    font-size: 0.8125rem;
+}
+
+.tooltip-content li .label {
+    color: var(--text-light);
+}
+
+.tooltip-content li .value {
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* 空状态 */
+.empty-cell {
+    color: var(--text-light);
+    font-size: 0.8125rem;
+    font-style: italic;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    .type-buttons {
+        flex-direction: column;
+    }
+    
+    .matrix-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

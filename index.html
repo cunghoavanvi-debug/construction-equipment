@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全球工程机械竞品对标 - 印度市场</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>🚜 全球工程机械竞品对标</h1>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="zh">中文</button>
+                <button class="lang-btn" data-lang="en">English</button>
+                <button class="lang-btn" data-lang="hi">हिन्दी</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-type">
+            <h2 data-i18n="selectProductType">选择产品类型</h2>
+            <div class="type-buttons">
+                <button class="type-btn active" data-type="loader">
+                    <span class="icon">🔱</span>
+                    <span data-i18n="wheelLoader">装载机</span>
+                </button>
+                <button class="type-btn" data-type="excavator">
+                    <span class="icon">🚜</span>
+                    <span data-i18n="excavator">挖掘机</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="matrix-section">
+            <div class="matrix-header">
+                <h2 data-i18n="productMatrix">产品矩阵</h2>
+                <div class="matrix-actions">
+                    <span class="selected-count" data-i18n="selected">已选择: 0 款产品</span>
+                    <button class="compare-btn" data-i18n="compare" disabled>对标</button>
+                </div>
+            </div>
+
+            <div class="matrix-table-container">
+                <table class="matrix-table" id="productMatrix">
+                    <thead>
+                        <tr>
+                            <th data-i18n="tonnage">吨位</th>
+                            <th>CAT</th>
+                            <th>Komatsu</th>
+                            <th>Hitachi</th>
+                            <th>JCB</th>
+                            <th>John Deere</th>
+                            <th>临工柳工</th>
+                            <th>三一</th>
+                            <th>小松</th>
+                        </tr>
+                    </thead>
+                    <tbody id="matrixBody">
+                        <!-- JavaScript 动态生成 -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- 产品详情提示框 -->
+    <div class="product-tooltip" id="tooltip">
+        <div class="tooltip-content">
+            <h4 id="tooltipName"></h4>
+            <ul id="tooltipSpecs">
+            </ul>
+        </div>
+    </div>
+
+    <script src="i18n.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
