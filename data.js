@@ -11,7 +11,7 @@ const productData = {
           "price": "N/A"
         }
       ],
-      "临工柳工": [
+      "柳工": [
         {
           "model": "836N",
           "tonnage": "3600.0",
@@ -43,7 +43,9 @@ const productData = {
           "engine": "Ashok Leyland",
           "bucketCapacity": "2.6 m³",
           "price": "N/A"
-        },
+        }
+      ],
+      "临工": [
         {
           "model": "L933H",
           "tonnage": "3000.0",
@@ -173,7 +175,7 @@ const productData = {
           "price": "N/A"
         }
       ],
-      "临工柳工": [
+      "柳工": [
         {
           "model": "850T",
           "tonnage": "5000.0",
@@ -221,7 +223,9 @@ const productData = {
           "engine": "Cummins",
           "bucketCapacity": "N/A",
           "price": "N/A"
-        },
+        }
+      ],
+      "临工": [
         {
           "model": "L956H",
           "tonnage": "5000.0",
@@ -333,7 +337,7 @@ const productData = {
       ]
     },
     "1-2t": {
-      "临工柳工": [
+      "柳工": [
         {
           "model": "818H",
           "tonnage": "1800.0",
@@ -353,7 +357,7 @@ const productData = {
       ]
     },
     "10t+": {
-      "临工柳工": [
+      "柳工": [
         {
           "model": "8128H",
           "tonnage": "nan",
@@ -367,7 +371,7 @@ const productData = {
   },
   "excavator": {
     "6-15t": {
-      "临工柳工": [
+      "柳工": [
         {
           "model": "914E",
           "tonnage": "13t",
@@ -389,7 +393,33 @@ const productData = {
           "digDepth": "5068 mm",
           "maxReach": "N/A",
           "price": "N/A"
+        }
+      ],
+      "三一": [
+        {
+          "model": "SY140C",
+          "tonnage": "14t",
+          "horsepower": "101 HP",
+          "engine": "Cummins",
+          "bucketCapacity": "N/A",
+          "operatingWeight": "14000 kg",
+          "digDepth": "5117 mm",
+          "maxReach": "N/A",
+          "price": "N/A"
         },
+        {
+          "model": "SY140C",
+          "tonnage": "14t",
+          "horsepower": "101 HP",
+          "engine": "Cummins",
+          "bucketCapacity": "N/A",
+          "operatingWeight": "14000 kg",
+          "digDepth": "N/A",
+          "maxReach": "N/A",
+          "price": "N/A"
+        }
+      ],
+      "临工": [
         {
           "model": "E6135Fi",
           "tonnage": "12t",
@@ -424,30 +454,6 @@ const productData = {
           "price": "N/A"
         }
       ],
-      "三一": [
-        {
-          "model": "SY140C",
-          "tonnage": "14t",
-          "horsepower": "101 HP",
-          "engine": "Cummins",
-          "bucketCapacity": "N/A",
-          "operatingWeight": "14000 kg",
-          "digDepth": "5117 mm",
-          "maxReach": "N/A",
-          "price": "N/A"
-        },
-        {
-          "model": "SY140C",
-          "tonnage": "14t",
-          "horsepower": "101 HP",
-          "engine": "Cummins",
-          "bucketCapacity": "N/A",
-          "operatingWeight": "14000 kg",
-          "digDepth": "N/A",
-          "maxReach": "N/A",
-          "price": "N/A"
-        }
-      ],
       "山河智能": [
         {
           "model": "SWE150B",
@@ -476,7 +482,7 @@ const productData = {
       ]
     },
     "16-30t": {
-      "临工柳工": [
+      "柳工": [
         {
           "model": "920E",
           "tonnage": "21t",
@@ -519,17 +525,6 @@ const productData = {
           "operatingWeight": "26500 kg",
           "digDepth": "6915 mm",
           "maxReach": "N/A",
-          "price": "N/A"
-        },
-        {
-          "model": "E6210HI",
-          "tonnage": "20t",
-          "horsepower": "149 HP",
-          "engine": "康明斯",
-          "bucketCapacity": "0.95 m³",
-          "operatingWeight": "20100 kg",
-          "digDepth": "6360 mm",
-          "maxReach": "9580 mm",
           "price": "N/A"
         }
       ],
@@ -576,6 +571,19 @@ const productData = {
           "operatingWeight": "25500 kg",
           "digDepth": "6403 mm",
           "maxReach": "9757 mm",
+          "price": "N/A"
+        }
+      ],
+      "临工": [
+        {
+          "model": "E6210HI",
+          "tonnage": "20t",
+          "horsepower": "149 HP",
+          "engine": "康明斯",
+          "bucketCapacity": "0.95 m³",
+          "operatingWeight": "20100 kg",
+          "digDepth": "6360 mm",
+          "maxReach": "9580 mm",
           "price": "N/A"
         }
       ],
@@ -686,7 +694,7 @@ const productData = {
       ]
     },
     "30t+": {
-      "临工柳工": [
+      "柳工": [
         {
           "model": "933E",
           "tonnage": "31t",
@@ -887,7 +895,7 @@ const productData = {
           "price": "N/A"
         }
       ],
-      "临工柳工": [
+      "临工": [
         {
           "model": "E680Hi",
           "tonnage": "7t",
@@ -957,9 +965,10 @@ const brands = [
     "Tata Hitachi",
     "三一",
     "中联重科",
-    "临工柳工",
+    "临工",
     "山河智能",
     "徐工",
+    "柳工",
 ];
 
 const tonnageGroups = {
